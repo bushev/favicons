@@ -156,5 +156,4 @@ $RECYCLE.BIN/
 .idea
 
 ### Custom ###
-dist/
 test/tmp/
