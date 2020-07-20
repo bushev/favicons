@@ -5,12 +5,17 @@
 const through2 = require("through2");
 const clone = require("clone");
 const mergeDefaults = require("lodash.defaultsdeep");
+const defaultsJSON = require("./config/defaults.json");
+const filesJSON = require("./config/files.json");
+const htmlJS = require("./config/html.js");
+const iconsJSON = require("./config/icons.json");
+const platformOptionsJSON = require("./config/platform-options.json");
 const configDefaults = {
-  ...require("./config/defaults.json"),
-  ...require("./config/files.json"),
-  ...require("./config/html.js"),
-  ...require("./config/icons.json"),
-  ...require("./config/platform-options.json")
+  ...defaultsJSON,
+  ...filesJSON,
+  ...htmlJS,
+  ...iconsJSON,
+  ...platformOptionsJSON
 };
 const helpers = require("./helpers.js");
 const path = require("path");
