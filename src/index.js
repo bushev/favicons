@@ -5,7 +5,13 @@
 const through2 = require("through2");
 const clone = require("clone");
 const mergeDefaults = require("lodash.defaultsdeep");
-const configDefaults = require("require-directory")(module, "config");
+const configDefaults = {
+  ...require("./config/defaults.json"),
+  ...require("./config/files.json"),
+  ...require("./config/html.js"),
+  ...require("./config/icons.json"),
+  ...require("./config/platform-options.json")
+};
 const helpers = require("./helpers.js");
 const path = require("path");
 const File = require("vinyl");
