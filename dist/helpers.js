@@ -18,13 +18,15 @@ const jsonxml = require("jsontoxml");
 
 const sizeOf = require("image-size");
 
-const Jimp = require("jimp");
+let Jimp = require("jimp");
 
 const sharp = require("sharp");
 
 const xml2js = require("xml2js");
 
 const PLATFORM_OPTIONS = require("./config/platform-options.json");
+
+Jimp = Jimp.default ? Jimp.default : Jimp;
 
 module.exports = function (options) {
   function directory(path) {
