@@ -18,11 +18,12 @@ const iconsJSON = require("./config/icons.json");
 
 const platformOptionsJSON = require("./config/platform-options.json");
 
-const configDefaults = { ...defaultsJSON,
-  ...filesJSON,
-  ...htmlJS,
-  ...iconsJSON,
-  ...platformOptionsJSON
+const configDefaults = {
+  defaults: defaultsJSON,
+  files: filesJSON,
+  html: htmlJS,
+  icons: iconsJSON,
+  "platform-options": platformOptionsJSON
 };
 
 const helpers = require("./helpers.js");

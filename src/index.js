@@ -11,11 +11,11 @@ const htmlJS = require("./config/html.js");
 const iconsJSON = require("./config/icons.json");
 const platformOptionsJSON = require("./config/platform-options.json");
 const configDefaults = {
-  ...defaultsJSON,
-  ...filesJSON,
-  ...htmlJS,
-  ...iconsJSON,
-  ...platformOptionsJSON
+  defaults: defaultsJSON,
+  files: filesJSON,
+  html: htmlJS,
+  icons: iconsJSON,
+  "platform-options": platformOptionsJSON
 };
 const helpers = require("./helpers.js");
 const path = require("path");
